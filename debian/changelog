@@ -1,0 +1,134 @@
+cairocffi (1.2.0-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Gianfranco Costamagna ]
+  * Import Ubuntu changes
+
+  [ Matthias Klose ]
+  * New upstream version (Closes: #973121).
+  * Disable pytest-flake8 and pytest-isort.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Wed, 23 Dec 2020 11:40:04 +0100
+
+cairocffi (0.9.0-4) unstable; urgency=medium
+
+  * Drop python2 support; Closes: #936262
+
+ -- Sandro Tosi <morph@debian.org>  Sun, 16 Feb 2020 10:52:23 -0500
+
+cairocffi (0.9.0-3) unstable; urgency=medium
+
+  * Team upload
+  * Readd xcffib dependency, used in tests.
+    - now the library should be fixed and should migrate
+      together with haskell transition
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Fri, 26 Jul 2019 11:21:20 +0200
+
+cairocffi (0.9.0-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat.
+
+  [ Gianfranco Costamagna ]
+  * Team upload
+  * Only recommend xcffib for now, still not in testing.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Wed, 24 Jul 2019 23:48:29 +0200
+
+cairocffi (0.9.0-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+  * d/changelog: Remove trailing whitespaces
+  * d/control: Remove trailing whitespaces
+  * d/control: Remove ancient X-Python-Version field
+  * d/control: Remove ancient X-Python3-Version field
+  * Convert git repository from git-dpm to gbp layout
+  * Use 'python3 -m sphinx' instead of sphinx-build for building docs
+
+  [ Gianfranco Costamagna ]
+  * Team upload
+  * Add patch to avoid running coverage on python2 build
+  * Add xcffib dependency, to help testsuite
+  * Drop Fix-test-compatibility-with-Cairo-1.15.12.patch, upstream.
+  * New upstream version 0.9.0
+    - this is the last Python2 compatible upstream version
+  * Refresh patches, drop upstream patches
+  * Drop xcb-tests patch, it should be fixed upstream (differently)
+  * Bump copyright years
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Fri, 19 Jul 2019 12:08:49 +0200
+
+cairocffi (0.7.2-2.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Revert changes from previous NMU:
+    - Remove Build-Depends and Recommends on xcffib, which is not in buster
+      (Closes: #918277, Reopens: #861680)
+    - Disable failing xcb tests (Closes: #868872)
+  * Backport upstream patch to fix tests for Cairo 1.15.12
+
+ -- Ivo De Decker <ivodd@debian.org>  Thu, 04 Apr 2019 22:13:20 +0000
+
+cairocffi (0.7.2-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Re-adds Build-Depends and Recommends on xcffib and the xcb tests
+    (Closes: #861680)
+
+ -- Iain R. Learmonth <irl@debian.org>  Sat, 15 Jul 2017 11:26:54 +0100
+
+cairocffi (0.7.2-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https)
+
+  [ Stefano Rivera ]
+  * Fix XCB tests (Closes: #828929)
+
+  [ Christoph Reiter ]
+  * Drop Build-Depends and Recommends on xcffib and skip xcb tests
+    (Closes: #861175)
+
+  [ Sandro Tosi ]
+  * Team upload.
+
+ -- Sandro Tosi <morph@debian.org>  Sun, 30 Apr 2017 20:32:16 -0400
+
+cairocffi (0.7.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * Forced python-cffi dependency version to >= 1.1.0
+  * new Vcs-* due to Python team git migration
+
+ -- Jean-Christophe Jaskula <jean.christophe.jaskula@gmail.com>  Sat, 08 Aug 2015 01:01:01 -0400
+
+cairocffi (0.7.1-1) unstable; urgency=low
+
+  * New upstream release (Closes: #768050)
+  * debian/control
+     - added python-xcffib as new recommended dependency
+  * debian/copyright
+     - Removing recurrent license description
+  * updated debian/watch with a more precise regular expression
+  * debian/rules
+     - do not compress changelog.html anymore
+     - run the tests in a new instance of xvfb with 24bits color depths
+         to avoid xcb test fails due to bad X11 connection
+         (xvfb-run -a --server-args="-screen 0 1024x768x24")
+  * Bump Standards-Version to 3.9.6 (no changes)
+
+ -- Jean-Christophe Jaskula <jean.christophe.jaskula@gmail.com>  Wed, 08 Oct 2014 20:10:30 -0400
+
+cairocffi (0.5.4-1) unstable; urgency=low
+
+  * Initial release (Closes: #762125)
+
+ -- Jean-Christophe Jaskula <jean.christophe.jaskula@gmail.com>  Sun, 14 Sep 2014 11:07:37 -0400

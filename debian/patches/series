@@ -1,0 +1,5 @@
+#fix_import_sphinxdoc.patch
+use_local_objects.inv.patch
+#fix-xcb-tests.patch
+no-pytest-isort.diff
+no-pytest-flake8.diff

@@ -1,0 +1,14 @@
+Document: python-cairocffi-doc
+Title: cairocffi documentation
+Author: cairocffi Developers
+Abstract: cffi-based cairo bindings for Python
+ cairocffi is a CFFI-based drop-in replacement for Pycairo,
+ a set of Python bindings and object-oriented API for cairo.
+ Cairo is a 2D vector graphics library with support for multiple backends
+ including image buffers, PNG, PostScript, PDF, and SVG file output.
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/python-cairocffi-doc/html/index.html
+Files: /usr/share/doc/python-cairocffi-doc/html/*
+
