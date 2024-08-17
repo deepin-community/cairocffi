@@ -2,6 +2,107 @@ cairocffi changelog
 -------------------
 
 
+Version 1.7.1
+.............
+
+Released on 2024-06-18
+
+* `#227 <https://github.com/Kozea/cairocffi/pull/227>`_:
+  Add get_hairline() and set_hairline() functions
+
+
+Version 1.7.0
+.............
+
+Released on 2024-04-27
+
+* Drop Python 3.7 support, add Python 3.12 support
+* `#221 <https://github.com/Kozea/cairocffi/pull/225>`_:
+  Add environment variable to set folder where DLLs are installed on Windows
+* `#225 <https://github.com/Kozea/cairocffi/pull/225>`_:
+  Use Ruff instead of Flake8 and isort
+
+
+Version 1.6.1
+.............
+
+Released on 2023-07-24
+
+* `#217 <https://github.com/Kozea/cairocffi/issues/217>`_:
+  Repair installation with PyInstaller
+
+
+Version 1.6.0
+.............
+
+Released on 2023-06-12
+
+**This version uses a new CFFI mode that may break your program.**
+
+CairoCFFI now uses Flit for packaging and is also distributed as a Python
+wheel.
+
+Please test carefully and don’t hesitate to report issues before using it in
+production.
+
+* `#216 <https://github.com/Kozea/cairocffi/pull/216>`_:
+  Use ABI-level in-line CFFI mode
+
+
+Version 1.5.1
+.............
+
+Released on 2023-04-15
+
+* `#212 <https://github.com/Kozea/cairocffi/issues/212>`_:
+  Bring back XCB support during wheel generation
+
+
+Version 1.5.0
+.............
+
+Released on 2023-03-17
+
+* `#106 <https://github.com/Kozea/cairocffi/issues/106>`_,
+  `#200 <https://github.com/Kozea/cairocffi/issues/200>`_:
+  Fallback to manual PNG file creation on hardened systems
+* `#210 <https://github.com/Kozea/cairocffi/pull/210>`_:
+  Use pyproject.toml for packaging and remove other useless files
+
+
+Version 1.4.0
+.............
+
+Released on 2022-09-23
+
+* `#205 <https://github.com/Kozea/cairocffi/pull/205>`_:
+  Use pikepdf to parse generated PDF
+* `#171 <https://github.com/Kozea/cairocffi/pull/171>`_:
+  Don’t use deprecated pytest-runner anymore
+
+
+Version 1.3.0
+.............
+
+Released on 2021-10-04
+
+* `2cd512d <https://github.com/Kozea/cairocffi/commit/2cd512d>`_:
+  Drop Python 3.6 support
+* `#196 <https://github.com/Kozea/cairocffi/pull/196>`_:
+  Fix import `constants.py` import
+* `#169 <https://github.com/Kozea/cairocffi/pull/169>`_:
+  Add extra library name "cairo-2.dll"
+* `#178 <https://github.com/Kozea/cairocffi/pull/178>`_:
+  Workaround for testing date string with cairo 1.17.4
+* `#186 <https://github.com/Kozea/cairocffi/pull/186>`_:
+  Fix link in documentation
+* `#195 <https://github.com/Kozea/cairocffi/pull/195>`_:
+  Fix typo in documentation
+* `#184 <https://github.com/Kozea/cairocffi/pull/184>`_,
+  `a4fc2a7 <https://github.com/Kozea/cairocffi/commit/a4fc2a7>`_:
+  Clean .gitignore
+
+
 Version 1.2.0
 .............
 
@@ -186,7 +287,7 @@ Released on 2013-07-16.
 
 Fix `#15 <https://github.com/SimonSapin/cairocffi/pull/15>`_:
 Work around `CFFI bug #92 <https://bitbucket.org/cffi/cffi/issue/92/>`_
-that caused memory leaks when file-like :obj:`target` objects
+that caused memory leaks when file-like ``target`` objects
 are passed to :meth:`Surface.write_to_png`, :class:`PDFSurface`,
 :class:`PSSurface` and :class:`SVGSurface`.
 
@@ -198,8 +299,8 @@ Released on 2013-06-20.
 
 Change :func:`~cairocffi.pixbuf.decode_to_image_surface`
 to raise a specific :exc:`~cairocffi.pixbuf.ImageLoadingError` exception
-instead of a generic :exc:`~exceptions.ValueError`.
-This new exception type inherits from :exc:`~exceptions.ValueError`.
+instead of a generic :exc:`ValueError`.
+This new exception type inherits from :exc:`ValueError`.
 
 
 Version 0.4.3

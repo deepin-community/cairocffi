@@ -23,6 +23,7 @@ override_dh_clean:
 update_intersphinx_mapping:
 	wget http://docs.python.org/dev/objects.inv -O debian/python.org_objects.inv
 	wget http://cairographics.org/documentation/pycairo/2/objects.inv -O debian/cairographics.org_pycairo2_objects.inv
+	wget http://cffi.readthedocs.io/en/latest/objects.inv -O debian/cffi.readthedocs.io_cffi_objects.inv
 
 override_dh_compress:
 	dh_compress -Xchangelog.html

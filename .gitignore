@@ -1,1 +1,11 @@
-.pc/
+__pycache__
+cairocffi/_ffi*.py
+*.egg
+*.egg-info
+/build
+/.eggs
+/dist
+/.cache
+/.coverage
+/.pytest_cache
+/docs/_build

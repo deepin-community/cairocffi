@@ -1,6 +1,6 @@
 """
-    cairocffi.ffi_build
-    ~~~~~~~~~~~~~~~~~~~
+    cairocffi.ffi
+    ~~~~~~~~~~~~~
 
     Build the cffi bindings
 
@@ -9,35 +9,25 @@
 
 """
 
-import sys
-from pathlib import Path
-
 from cffi import FFI
 
-# Path hack to import constants when this file is exec'd by setuptools
-sys.path.append(str(Path(__file__).parent))
-
-import constants  # noqa isort:skip
-
-# Create an empty _generated folder if needed
-(Path(__file__).parent / '_generated').mkdir(exist_ok=True)
+from . import constants
 
 # Primary cffi definitions
 ffi = FFI()
-ffi.set_source('cairocffi._generated.ffi', None)
 ffi.cdef(constants._CAIRO_HEADERS)
 
 # include xcffib cffi definitions for cairo xcb support
 try:
-    from xcffib.ffi_build import ffi as xcb_ffi
-    ffi.include(xcb_ffi)
-    ffi.cdef(constants._CAIRO_XCB_HEADERS)
+    from xcffib.ffi import ffi as xcb_ffi
 except ImportError:
     pass
+else:
+    ffi.include(xcb_ffi)
+    ffi.cdef(constants._CAIRO_XCB_HEADERS)
 
 # gdk pixbuf cffi definitions
 ffi_pixbuf = FFI()
-ffi_pixbuf.set_source('cairocffi._generated.ffi_pixbuf', None)
 ffi_pixbuf.include(ffi)
 ffi_pixbuf.cdef('''
     typedef unsigned long   gsize;
@@ -98,8 +88,3 @@ ffi_pixbuf.cdef('''
     void              g_error_free                   (GError *error);
     void              g_type_init                    (void);
 ''')
-
-
-if __name__ == '__main__':
-    ffi.compile()
-    ffi_pixbuf.compile()
