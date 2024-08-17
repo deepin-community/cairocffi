@@ -1,5 +1,4 @@
 #fix_import_sphinxdoc.patch
-use_local_objects.inv.patch
 #fix-xcb-tests.patch
-no-pytest-isort.diff
-no-pytest-flake8.diff
+0001-Use-a-local-copy-of-objects.inv.patch
+0002-Restore-cairocffi-VERSION.patch

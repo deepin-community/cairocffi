@@ -1,3 +1,94 @@
+cairocffi (1.7.1-2) unstable; urgency=medium
+
+  * Replace retired package uploader. (Closes: #1075908)
+  * debian/control: Bump Standards-Version to 4.7.0.
+
+ -- Boyuan Yang <byang@debian.org>  Sun, 07 Jul 2024 17:48:38 -0400
+
+cairocffi (1.7.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * debian/python.org_objects.inv: Download the new version.
+  * debian/patches/: Bump embedded version string.
+  * debian/rules: Fix mapping file download name.
+
+ -- Boyuan Yang <byang@debian.org>  Thu, 04 Jul 2024 22:45:10 -0400
+
+cairocffi (1.7.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * debian/*.inv: update intersphinx object files.
+
+ -- Boyuan Yang <byang@debian.org>  Sun, 12 May 2024 10:51:42 -0400
+
+cairocffi (1.6.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.6.1
+  * debian/control: Update homepage.
+  * debian/upstream/metadata: Fix homepage.
+  * debian/patches: Refresh against v1.6.1.
+  * debian/*.inv: update intersphinx object files.
+  * debian/control: Add new build-dep python3-sphinx-rtd-theme.
+
+ -- Boyuan Yang <byang@debian.org>  Wed, 13 Sep 2023 13:01:38 -0400
+
+cairocffi (1.6.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * debian/control: Replace build system to use flit.
+  * debian/python.org_objects.inv: Updated for python3.11.
+  * debian/patches/0002: Temporarily restore cairocffi/VERSION
+    file before upstream fix in v1.6.1 is released.
+
+ -- Boyuan Yang <byang@debian.org>  Tue, 13 Jun 2023 10:07:43 -0400
+
+cairocffi (1.4.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * debian/control: Update build-dependencies:
+    - Drop Gtk 2 build-dependency. (Closes: #967278).
+    + Add runtime Recommendation on Gtk-3 library.
+    + Update test-build-dependencies.
+  * debian/python.org_objects.inv: Updated for python3.10.
+  * debian/patches/no-pytest-*.patch: Dropped, no longer needed.
+
+ -- Boyuan Yang <byang@debian.org>  Tue, 11 Oct 2022 10:17:35 -0400
+
+cairocffi (1.3.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * debian/python.org_objects.inv: Updated for python3.9.
+  * debian/patches: Refresh patches.
+
+ -- Boyuan Yang <byang@debian.org>  Fri, 18 Mar 2022 14:03:41 -0400
+
+cairocffi (1.2.0-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Bump debhelper from deprecated 9 to 13.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Remove constraints unnecessary since buster:
+    + Build-Depends: Drop versioned constraint on python3-cffi.
+
+  [ Boyuan Yang ]
+  * debian/control: Update homepage following upstream changes.
+  * debian/control: Complete libgdk-pixbuf transition (Closes: #992261)
+  * debian/watch: Monitor new upstream location using v4 format.
+  * Mark package python-cairocffi-doc as Multi-Arch: foreign.
+  * Insert Built-Using: ${sphinxdoc:Built-Using} field for package
+    python-cairocffi-doc.
+
+ -- Boyuan Yang <byang@debian.org>  Wed, 17 Nov 2021 08:24:22 -0500
+
 cairocffi (1.2.0-1) unstable; urgency=medium
 
   [ Ondřej Nový ]
